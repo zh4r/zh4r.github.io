@@ -1,0 +1,17 @@
+html {
+font-family: Montserrat, Roboto, sans-serif;
+}
+
+body {
+color: rgb(205, 241, 255);
+background-color: rgb(71, 56, 36);
+}
+
+a:visited {
+color: whitesmoke;
+}
+
+iframe {
+width: 50%;
+height: 400px;
+}
