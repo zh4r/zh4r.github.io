@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    
+    <title>Pull</title>
+
+<link rel="stylesheet" href="git_pull.css">
+</head>
+
+<body>
+    <h1>Git Pull.</h1>
+
+<p>Short answer: this is Git's similarity index. For a detailed description of the algorithm for computing similarity, see Trying to understand `git diff` and `git mv` rename detection mechanism. <br><br>
+
+Longer: This actually isn't git push; you saw this from git pull. But it isn't git pull either: it's output resulting from git pull running git merge, and it is actually git diff --stat that prints it.1 What git diff --stat prints here is:2
+<br><br>
+verb path (percentage)
+<br><br>
+where verb is one of rename, rewrite, or copy, path is a file path name or abbreviated version of the same or (for renames) old and new path names, and percentage is the similarity index. Git uses this similarity index to determine whether two files with different names, or two files with the same name but very different contents, might actually be the same file, or different files after all.
+<br><br>
+That is, suppose commit ba3c046 has files A1.txt and A2.txt in it, and commit 50fcdab has A2.txt and B1.txt in it (and neither commit has any other files). It's likely—it stands to reason—that the two A2.txt files are "the same" file, even if the contents are somewhat changed. Perhaps someone checked out commit ba3c046 and modified the file and then made commit 50fcdab from the modified result.
+<br><br>
+But what about A1.txt vs B1.txt? Maybe someone checked out ba3c046, renamed the file—with or without changing it—and made commit 50fcdab. If they did, commit 50fcdab's B1.txt is really the same file as commit ba3c046's A1.txt.
+<br><br>
+The way Git determines if these two are really identical files, or "nearly identical" (renamed and slightly changed) files, is to compare them for similarity. To do so, it computes the similarity index between A1.txt and B1.txt.
+<br><br>
+Now suppose that we're comparing commit ba3c046 (with its two files) to commit 0f3ac31, which has A2.txt, B1.txt, and C1.txt. It doesn't matter to Git when each commit was made; Git will look at the contents in A1.txt and score their similarity to 0f3ac31's B1.txt and 0f3ac31's C1.txt. If the file is sufficiently similar, Git will match it up. Git will pick the 0f3ac31 file that is most similar to the A1.txt in ba3c046.
+<br><br>
+This process—of matching up files by how close their contents match—is how Git determines which files are "the same" in the two commits being git diff-ed. The term I have been using for this process is identifying files, which I don't like as well as I might since we're not trying to find files that are 100% identical (although it helps a lot when they are, due to Git's internal storage system).
+<br><br>
+By default, two files in two different commits are automatically identified (as "the same file") if they have the same name, even if their contents differ a whole lot. That is, these two files are pre-paired, rather than being paired up because of a computed similarity. In this case, their similarity index will be relatively poor, and Git will call that a "rewrite".
+<br><br>
+Git also has a dissimilarity index concept, which is just 100 minus the similarity: files 75% similar are 25% dissimilar, for instance. The -B (break pairings) flag to git diff can be used to break the automatic pairings from Git's default assumption, that a file whose path is P in the left-side commit must be identical to the file whose path is P in the right-side commit. Running git merge invokes git diff without setting the break flag, though.
+<br><br>
+Calculating similarity is expensive, so it's done only for unpaired files or under -B.  The unpaired files are those without a partner on the other side initially, or those broken-apart by-B.  If you use the-Cor--find-copiesor--find-copies-harder` options, Git will consider some left-hand / source-side files as perhaps having been copied to some right-hand / destination-side files, so that pairing a source side file with a destination side file does not remove the source file from the "sources" pool. For a large repository where the two sides of the diff contain a lot of files, this requires doing a lot of similarity computations, and can take a lot of time.
+<br><br>
+1You can also get a similarity index from git apply. I think the diffstat output from git merge is now built directly into git merge itself, but for a real merge, you can repeat it by running git diff --stat &lt;merge&gt;^1 &lt;merge&gt;.
+<br><br>
+For a fast-forward operation (which isn't really a merge even though git merge will do it) you need to specify the correct pair of commits. Right after git pull, this is HEAD@{1} and HEAD, so git diff --stat HEAD@{1} HEAD will do the trick, but since these are relative names, they will stop working after a while.) Also, a few shells (PowerShell on Windows, and tcsh and zsh on Linux, for instance) make it harder to provide the @{1} suffix as they like to use the {...} syntax for their own purposes.
+<br><br>
+2There are several formats for this. The output from git diff-tree, for instance, uses code letters and percentages, rather than words. These are all just different ways to say the same thing, though: that Git has paired up certain files in the left and right side commits, perhaps despite some changes to those files' contents.</p>
+
+</body>
+
+</html>
