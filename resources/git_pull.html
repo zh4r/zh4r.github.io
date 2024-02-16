@@ -15,10 +15,12 @@
 </head>
 
 <body>
-<nav><a href="https://zh4r.github.io/">zh4r</a></nav>
+<nav><a href="https://zh4r.github.io/" target="_blank">ZH4R</a></nav>
 
     <h1>Git Pull.</h1>
-
+<hr>
+<h3>&bull; What are the percentages we see, when we <code>git pull</code>?</h3> 
+<!-- add image of what we're talking about here! -->
 <p>Short answer: this is Git's similarity index. For a detailed description of the algorithm for computing similarity, see Trying to understand <code>git diff</code> and <code>git mv</code> rename detection mechanism. <br><br>
 
 Longer: This actually isn't <code>git push</code>; you saw this from <code>git pull</code>. But it isn't <code>git pull</code> either: it's output resulting from <code>git pull</code> running <code>git merge</code>, and it is actually <code>git diff --stat</code> that prints it.1 What <code>git diff --stat</code> prints here is:2
