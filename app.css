@@ -1,46 +1,47 @@
 html {
-font-family: Montserrat, Roboto, sans-serif;
+    font-family: Montserrat, Roboto, sans-serif;
 }
 
 body {
-color: rgb(205, 241, 255);
-background-color: rgb(71, 56, 36);
+    margin: 2rem;
+    color: antiquewhite;
+    background-color: rgb(51, 36, 22);
 }
 
 a {
-position: relative;
-color: rgb(255, 255, 255);
-text-decoration: none; 
-font-weight: 700;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    font-weight: 700;
 }
 
 a:hover {
-color: #ffffff;
+    color: #ffe3af;
 }
 
 a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffe3afad;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 a:hover::before {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 a:visited {
-color: rgb(212, 212, 212);
+    color: wheat;
 }
 
 iframe {
-width: 70%;
-height: 400px;
-margin-left: 3rem;
+    width: 70%;
+    height: 400px;
+    margin-left: 3rem;
 }

@@ -4,3 +4,5 @@
 
     Things I've struggled with or wondered about when using 
     `git pull`.
+
++ [/Front End Mentor/ QR Code Component](https://zh4r.github.io/FEM/qr-code/index.html "QR Code Component")
