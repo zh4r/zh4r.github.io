@@ -30,7 +30,7 @@ Solution mobile preview:\
 
 ### Links
 
-- Solution URL: [QR Component github.io](https://zh4r.github.io/FEM/qr-code)
+- Solution URL: [QR Component github.io](https://zh4r.github.io/FEM/qr-code/index.html)
 
 ## My process
 Decided to use as little as possible to achieve the needed result. Still learning, so there's probably a lot I could've done differently to make the solution even simpler. Still happy with it, though.
