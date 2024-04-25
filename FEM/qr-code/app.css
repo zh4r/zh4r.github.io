@@ -3,7 +3,6 @@ body {
     font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .container {
@@ -20,7 +19,6 @@ body {
 .imgCont {
     display: flex;
     margin-top: 1rem;
-    padding: 0;
 }
 
 .imgCont img {
