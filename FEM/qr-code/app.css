@@ -5,6 +5,18 @@ body {
     justify-content: center;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     position: absolute;
     top: 50%;
@@ -50,7 +62,7 @@ body {
 p {
     font-size: 0.94rem;
     color: hsl(220, 15%, 55%);
-    margin:0;
+    margin: 0;
 }
 
 .attribution {
