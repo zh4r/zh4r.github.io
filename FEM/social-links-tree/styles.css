@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: hsl(0, 0%, 8%);
+}
+
+/* center content */
+main {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 395px;
+    height: 620px;
+    background-color: hsl(0, 0%, 13%);
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+    width: 90px;
+    height: 90px;
+    border-radius: 5rem;
+}
+
+.pv {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+.pv h1 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.pv h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem ;
+    line-height: 2rem;
+    font-size: medium;
+    font-weight: 600;
+    color: hsl(34, 94%, 57%);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.links a {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 70%;
+    border-radius: 0.6rem;
+    background-color: hsl(0, 0%, 20%);
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.8rem;
+    margin: 0.5rem auto;
+    transition: 0.25s ease-in
+}
+
+.links a:hover, a:focus-within {
+    background-color: hsl(34, 94%, 57%);
+    color: hsla(0, 0%, 7%, 0.813);
+    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.25s ease-in;
+}
+
+
+footer {
+    position: absolute;
+    margin: 0 auto;
+    font-size: 11px;
+    text-align: center;
+    bottom: 1%;
+    color: aliceblue;
+}
+
+footer a {
+    color: hsl(34, 94%, 50%);
+    transition: 0.25s;
+}
+
+footer a:hover {
+    color: hsl(34, 94%, 50%);
+    background-color: rgba(255, 119, 0, 0.5);
+    color: antiquewhite;
+    transition: 0.25s;
+}
