@@ -1,10 +1,10 @@
-# Web Dev Solutions!
+# WebDev Solutions!
 
-+ [Git Pull melting pot.](https://zh4r.github.io/resources/git_pull.html "Pull Docs")
+<!-- + [Git Pull melting pot.](https://zh4r.github.io/resources/git_pull.html "Pull Docs")
 
     Things I've struggled with or wondered about when using 
-    `git pull`.
+    `git pull`. -->
 
-+ [/Front End Mentor/ QR Code Component](https://zh4r.github.io/FEM/qr-code/index.html "QR Code Component")
++ [QR Code Component /Front End Mentor/](https://zh4r.github.io/FEM/qr-code/index.html "QR Code Component")
 
-+ [/Front End Mentor/ Social Links](https://zh4r.github.io/FEM/social-links-tree/index.html "Social Links Tree")
++ [Social Links /Front End Mentor/](https://zh4r.github.io/FEM/social-links-tree/index.html "Social Links Tree")
