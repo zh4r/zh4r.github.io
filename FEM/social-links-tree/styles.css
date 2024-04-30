@@ -1,6 +1,6 @@
 body {
     display: grid;
-    min-height: 95vh;
+    min-height: 98vh;
     place-items: center;
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -85,7 +85,7 @@ li a:hover, a:focus-within {
 }
 
 footer {
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
     font-size: 11px;
     color: aliceblue;
