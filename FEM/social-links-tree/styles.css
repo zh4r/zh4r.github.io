@@ -1,10 +1,12 @@
 body {
     display: grid;
     min-height: 98vh;
+    grid-template-rows: 95vh;
     place-items: center;
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 14px;
     background-color: hsl(0, 0%, 8%);
+
 }
 
 article {
@@ -45,7 +47,7 @@ section h1 {
 section address {
     font-style: normal;
     margin-top: 0;
-    margin-bottom: 0.5rem ;
+    margin-bottom: 0.5rem;
     line-height: 2rem;
     font-size: medium;
     font-weight: 600;
@@ -77,7 +79,8 @@ li a {
     transition: 0.25s ease-in
 }
 
-li a:hover, a:focus-within {
+li a:hover,
+a:focus-within {
     background-color: hsl(34, 94%, 57%);
     color: hsla(0, 0%, 7%, 0.813);
     box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -85,7 +88,6 @@ li a:hover, a:focus-within {
 }
 
 footer {
-    margin-bottom: 0;
     padding: 0;
     font-size: 11px;
     color: aliceblue;
@@ -103,3 +105,17 @@ footer a:hover {
     transition: 0.25s;
 }
 
+@media (max-width: 420px), (max-height: 560px) {
+    body {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    footer {
+        height: auto;
+        max-width: 100%;
+        z-index: -1;
+    }
+}
