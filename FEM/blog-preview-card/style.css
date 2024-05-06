@@ -1,3 +1,6 @@
+html {
+    font-size: 16px;
+}
 body {
     display: grid;
     place-items: center;
@@ -32,7 +35,7 @@ main {
 
     p {
         font-size: 0.8rem;
-        font-weight: 600;
+        font-weight: 500;
         margin-top: 0.9rem;
     }
 }
