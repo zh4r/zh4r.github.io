@@ -13,13 +13,14 @@ html {
 
 body {
     display: grid;
-    min-height: 98vh;
+    min-height: 100vh;
     place-items: center;
 }
 
 main {
+    border-radius: 2rem;
     background-color: white;
-    width: 375px;
+    width: 100%;
 }
 
 hr {
