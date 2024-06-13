@@ -12,3 +12,5 @@
 + [Blog Preview Card /Front End Mentor/](https://zh4r.github.io/FEM/blog-preview-card/index.html "Blog Preview Post")
 
 + [Simple Recipe Page /Front End Mentor/](https://zh4r.github.io/FEM/recipe-page/index.html "Simple Recipe Page")
+
++ [Results Summary Component /Front End Mentor/](https://zh4r.github.io/FEM/results-summary/index.html "Results Summary Component")
