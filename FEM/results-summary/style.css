@@ -1,0 +1,364 @@
+/* 
+PRIMARY
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%) 
+
+GRADIENTS
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+NEUTRAL
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+*/
+
+html {
+    font-family: 'Hanken Grotesk';
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: start center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 375px;
+    max-height: 800px;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+/* Heading section */
+header {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    border-bottom-left-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+    transition: all 333ms ease-in-out;
+}
+
+h1 {
+    margin: 0;
+    padding: 1.3rem 0 0 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.658);
+}
+
+h2 {
+    font-size: 3.1rem;
+    padding: 1.6rem 0 1.6rem 0;
+    margin: 1.3rem 0;
+}
+
+h3 {
+    padding: 0 0 1.3rem 0;
+    margin: -2.7rem 0 0 0;
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.575);
+}
+
+h4 {
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 1.4rem 0 .4rem 0;
+}
+
+p {
+    margin: auto auto;
+    padding: 0 2rem 2.3rem 2rem;
+    width: 70%;
+    text-align: center;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+
+/* Main section */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 85%;
+    margin: 1rem 1.4rem 1rem 1.4rem;
+    font-weight: 600;
+}
+
+tr {
+    border-radius: .6rem;
+    display: block;
+    margin: 0 0 .9rem 0;
+    transition: all 333ms ease-in-out;
+}
+
+th {
+    font-weight: 600;
+    padding: .2rem 0 .6rem 0;
+}
+
+td {
+    font-size: .9rem;
+    padding: .95rem 0;
+}
+
+button {
+    width: 84%;
+    display: block;
+    position: relative;
+    min-height: 50px;
+    z-index: 1;
+    margin: -.3rem auto;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: hsl(224, 30%, 27%);
+    padding: .9rem;
+    color: aliceblue;
+    border-radius: 2rem;
+    border: 0;
+    transition: all .5s ease-in-out;
+}
+
+
+footer {
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: .7rem;
+
+    a {
+        position: relative;
+        color: hsl(234, 85%, 45%);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: hsl(166, 100%, 37%);
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    a:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+
+/* Classes */
+.scored {
+    margin: auto auto;
+    width: 150px;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    transition: box-shadow 333ms ease-in;
+}
+
+.Reaction {
+    background-color: hsla(0, 100%, 67%, 0.082);
+    color: hsl(0, 100%, 67%);
+}
+
+.Memory {
+    background-color: hsla(39, 100%, 56%, 0.082);
+    color: hsl(39, 100%, 56%);
+}
+
+.Verbal {
+    background-color: hsla(166, 100%, 37%, 0.082);
+    color: hsl(166, 100%, 37%);
+}
+
+.Visual {
+    background-color: hsla(241, 100%, 89%, .25);
+    color: hsl(234, 85%, 45%);
+}
+
+.ico {
+    width: 5%;
+    padding: .5rem .8rem .3rem .8rem;
+    text-align: center;
+}
+
+.cat {
+    text-align: left;
+}
+
+.sco {
+    padding: 0 .4rem;
+    text-align: right;
+    color: black;
+}
+
+.outOf {
+    width: 3rem;
+    padding: 0 0 0 0;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: 700;
+}
+
+
+/* Transitions */
+button::before {
+    border-radius: 2rem;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:hover {
+    text-shadow: .1rem .1rem 1rem rgba(255, 255, 255, 0.493);
+    cursor: pointer;
+    box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
+}
+
+#data tr:hover {
+    text-shadow: .1rem .1rem .4rem rgba(126, 126, 126, 0.2);
+    box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
+}
+
+header:hover {
+    box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
+    text-shadow: .1rem .1rem .4rem rgba(126, 126, 126, 0.2);
+}
+
+.scored:hover {
+    text-shadow: .1rem .1rem .4rem rgba(126, 126, 126, 0.2);
+    box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
+}
+
+
+/* Animations */
+@keyframes rowFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn1 {
+    animation-name: rowFadeIn;
+    animation-duration: .5s;
+}
+
+.fadeIn2 {
+    animation-name: rowFadeIn;
+    animation-duration: 2s;
+}
+
+.fadeIn3 {
+    animation-name: rowFadeIn;
+    animation-duration: 5s;
+}
+
+
+/* Media queries */
+@media (min-width: 1000px) {
+    .scored {
+        width: 200px;
+        height: 200px;
+    }
+
+    html {
+        place-items: center;
+        font-size: 20px;
+    }
+
+    body {
+        max-width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header,
+    main {
+        display: inline-block;
+        margin: 0;
+        width: 365px;
+        height: 510px;
+        border-radius: 1.8rem;
+        vertical-align: middle;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        padding: 2rem 0 .3rem 0;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        padding: 2rem 0 1.3rem 0;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        padding: 0 0 .5rem 0;
+    }
+
+    th {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    footer {
+        left: 363px;
+    }
+}
+
+@media (max-height: 805px) and (max-width: 900px) {
+    footer {
+        position: absolute;
+        top: 0;
+        color: aliceblue;
+        font-size: .7rem;
+        a {
+            color: azure;
+        }
+        a:hover {
+        color: hsl(224, 100%, 87%);
+    }
+        a::before {
+            background-color: hsl(221, 100%, 96%);
+        }
+    }
+}
