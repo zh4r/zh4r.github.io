@@ -170,6 +170,12 @@ footer {
 
 
 /* Classes */
+
+.shadow-box {
+    box-shadow: .1rem .4rem 1rem 1rem hsl(221, 100%, 96%);
+    border-radius: 1.8rem;
+}
+
 .scored {
     margin: auto auto;
     width: 150px;
