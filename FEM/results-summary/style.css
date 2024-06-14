@@ -86,6 +86,11 @@ p {
 
 
 /* Main section */
+
+main {
+    padding-bottom: 2rem;
+}
+
 table {
     border-collapse: separate;
     border-spacing: 0;
@@ -316,6 +321,10 @@ header:hover {
         align-items: center;
     }
 
+    main {
+        padding-bottom: 0;
+    }
+
     header,
     main {
         display: inline-block;
@@ -357,12 +366,15 @@ header:hover {
         top: 0;
         color: aliceblue;
         font-size: .7rem;
+
         a {
             color: azure;
         }
+
         a:hover {
-        color: hsl(224, 100%, 87%);
-    }
+            color: hsl(224, 100%, 87%);
+        }
+
         a::before {
             background-color: hsl(221, 100%, 96%);
         }
