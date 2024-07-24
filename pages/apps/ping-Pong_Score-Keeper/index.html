@@ -9,12 +9,23 @@
 
 <style>
     html {
+        font-size: 12pt;
         text-align: center;
-        background-color: rgb(40, 100, 0);
+        background-color: rgb(60, 77, 0);
     }
     #user1, #user2 {
+        font-size: 1.5rem;
         width: 50%;
         border-right: 2px solid rgb(180, 180, 180);
+    }
+    #p1Cell, #p2Cell{
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    input {
+        float: center;
+        width: 65px;
+        height: 25px;
     }
 </style>
 </head>
@@ -35,9 +46,9 @@
                                 <label for="playto" class="label is-large is-inline">Playing To</label>
                                 <div class="select is-rounded">
                                     <select name="" id="playto">
-                                        <option value="5">5</option>
                                         <option value="11">11</option>
                                         <option value="21">21</option>
+                                        <option value="custom">Custom</option>
                                     </select>
                                 </div>
                             </div>
@@ -46,7 +57,7 @@
                             <h3>Game Score</h3>
                                 <h1 class="title is-1"><span id="p1Pen" style="font-size: xx-large;" hidden>0</span> <span id="p1Display">0</span> - <span id="p2Display">0</span> <span id="p2Pen" style="font-size: xx-large;" hidden>0</span></h1>
                         <footer class="card-footer" style="flex-wrap: wrap;">
-                            <button id="p1Button" class="is-primary button card-footer-item is-medium">+1 Player One</button>
+                            <button id="p1Button" class="is-success button card-footer-item is-medium">+1 Player One</button>
                             <button id="p2Button" class="is-info button card-footer-item is-medium">+1 Player Two</button>
                             <button id="reset" class="is-danger button card-footer-item is-medium">Reset Game</button>
                         </footer>
