@@ -17,4 +17,6 @@
 
 + [FAQ Accordion /Front End Mentor/](https://zh4r.github.io/FEM/faq-accordion/index.html "FAQ Accordion")
 
++ [Newsletter Sign Up /Front End Mentor/](https://zh4r.github.io/FEM/NewsletterSignUp/index.html "Newsletter Sign Up")
+
 + [Ping Pong Score Keeper](https://zh4r.github.io/pages/apps/ping-Pong_Score-Keeper/index.html "Table Tennis Score Keeper")
