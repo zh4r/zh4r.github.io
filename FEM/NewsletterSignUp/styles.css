@@ -89,7 +89,8 @@ h1 {
 
 section {
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    /* justify-content: start; */
 }
 
 p {
@@ -114,14 +115,14 @@ li::before {
     top: 0%;
 }
 
-form {
+form, #dismiss {
+    align-self: center;
+    justify-self: end;
     z-index: 100;
-    position: absolute;
-    bottom: 0;
     width: 90%;
     font-weight: 600;
     font-size: .8rem;
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 2rem 1.5rem;
 }
 
 input {
@@ -143,7 +144,6 @@ input::placeholder {
 input:hover {
     border: 1px solid rgba(0, 0, 0, 0.521);
     box-shadow: 1px 6px 20px hsla(5, 51%, 14%, 0.2);
-    
 }
 
 button {
@@ -155,7 +155,6 @@ button {
     width: 100%;
     border-radius: .5rem;
     padding: 1.3rem;
-    margin: .5rem 0 .4rem 0;
     transition: box-shadow .2s ease-in;
 }
 
@@ -210,36 +209,40 @@ button:hover {
         height: 30.2rem;
         padding: 1rem 1rem 2rem 4rem;
         border-radius: 2rem;
+
         h1,
         section {
             padding: 0;
             margin: 0;
             width: 90%;
         }
+
         h1 {
             font-size: 3.4rem;
             line-height: 3.5rem;
         }
+
         p {
             font-size: 1rem;
             margin: 1.2rem 0 1.5rem 0;
         }
-        form {
-            margin: 0;
+
             button {
                 padding: 1.2rem;
             }
-        }
+
         #icon-success {
             margin: 1.5rem 0 1.8rem 0;
         }
     }
 }
 
-@media (min-width: 550px) and (max-width: 1160px) {
+@media (min-width: 375px) and (max-width: 1160px) {
     main {
+        min-height: 800px;
         width: 24rem;
         padding-right: 2rem;
+
         #banner {
             width: 24rem;
         }
@@ -247,10 +250,12 @@ button:hover {
 
     main#submittedMain {
         width: 24rem;
+
         h1 {
             margin: 1rem 0 0 1.5rem;
             width: 80%;
         }
+
         #dismiss {
             width: 21rem;
         }
