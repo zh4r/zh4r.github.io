@@ -34,8 +34,12 @@ main {
     margin-top: 0;
     line-height: 1.5rem;
     background-color: white;
-    width: 100vw;
+    min-height: 820px;
     height: 100vh;
+
+    max-width: 24rem;
+    padding: 0 2rem 0 0;
+
     font-weight: 500;
     border-radius: 1rem;
     box-shadow: .1rem .1rem 1rem rgb(0, 0, 0);
@@ -59,10 +63,27 @@ main:hover {
 
 #submittedMain {
     padding: 8rem 0 0 0;
+
+    /*  */
+    width: 24rem;
+
+    h1 {
+        margin: 1rem 0 0 1.5rem;
+        width: 80%;
+    }
+
+    #dismiss {
+        width: 21rem;
+    }
+
+    /*  */
 }
 
 #banner {
     width: 100vw;
+    /*  */
+    max-width: 24rem;
+    /*  */
     margin-bottom: 1.5rem;
 }
 
@@ -76,21 +97,20 @@ main:hover {
     color: rgb(219, 111, 109);
 }
 
-section,
-h1 {
-    margin: 0 1rem 0 1.4rem;
-}
+
+
 
 h1 {
+    margin: 0 1rem 0 1.4rem;
     font-family: 'Roboto Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2.5rem;
     line-height: 2.5rem;
 }
 
 section {
+    margin: 0 1.5rem 0 1.5rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: start; */
 }
 
 p {
@@ -115,14 +135,24 @@ li::before {
     top: 0%;
 }
 
-form, #dismiss {
+form,
+#dismiss {
     align-self: center;
     justify-self: end;
     z-index: 100;
-    width: 90%;
     font-weight: 600;
     font-size: .8rem;
-    margin: 2rem 0 2rem 1.5rem;
+    margin: 2rem 0 0 2rem;
+    /*  */
+    width: 21rem;
+    /*  */
+
+}
+
+form#dismiss {
+    margin: 0 0 2rem 0;
+    position: absolute;
+    bottom: 0;
 }
 
 input {
@@ -130,7 +160,7 @@ input {
     font-weight: 600;
     border-radius: .5rem;
     border: 1px solid rgba(0, 0, 0, 0.233);
-    padding: 1.2rem;
+    padding: 1rem;
     margin: .3rem 0 1rem 0;
     width: 100%;
     cursor: pointer;
@@ -154,13 +184,13 @@ button {
     color: white;
     width: 100%;
     border-radius: .5rem;
-    padding: 1.3rem;
+    padding: 1.1rem;
     transition: box-shadow .2s ease-in;
 }
 
 button:hover {
     background-image: linear-gradient(45deg, rgb(255, 83, 123), hsl(4, 100%, 67%));
-    box-shadow: 1px 6px 20px hsla(4, 100%, 67%, 0.514);
+    box-shadow: 1px 16px 24px hsla(4, 100%, 67%, 0.42);
     cursor: pointer;
     transition: box-shadow .4s ease;
 }
@@ -169,19 +199,22 @@ button:hover {
     main {
         width: 80%;
         max-width: 925px;
-        max-height: 640px;
+        min-height: 0px;
+        max-height: 600px;
+        border-radius: 2rem;
+        padding: 0;
     }
 
     #banner {
         display: inline;
         float: right;
-        max-width: 43%;
+        max-width: 40%;
         content: url(./assets/img/illustration-sign-up-desktop.svg);
     }
 
     h1 {
         font-size: 3.5rem;
-        margin: 6.5rem 2rem .5rem 4rem;
+        margin: 6rem 2rem .5rem 4rem;
     }
 
     #banner {
@@ -193,21 +226,22 @@ button:hover {
         display: inline;
         float: left;
         width: 40%;
-        margin: 0 .2rem 2rem 4rem;
+        margin: 0 .2rem 0 4rem;
     }
 
     form {
         display: inline;
-        position: relative;
+        /* position: relative; */
         float: left;
         width: 100%;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
+        margin-left: 0;
     }
 
     main#submittedMain {
-        width: 30.2rem;
-        height: 30.2rem;
-        padding: 1rem 1rem 2rem 4rem;
+        width: 30.5rem;
+        max-height: 30.5rem;
+        padding: 1rem 2rem 0 4rem;
         border-radius: 2rem;
 
         h1,
@@ -224,44 +258,35 @@ button:hover {
 
         p {
             font-size: 1rem;
-            margin: 1.2rem 0 1.5rem 0;
+            margin: 1rem 0 0 0;
         }
 
-            button {
-                padding: 1.2rem;
-            }
+        form {
+            position: relative;
+        }
+        
+        input {
+            padding: 0;
+        }
 
         #icon-success {
             margin: 1.5rem 0 1.8rem 0;
         }
-    }
-}
-
-@media (min-width: 375px) and (max-width: 1160px) {
-    main {
-        min-height: 800px;
-        width: 24rem;
-        padding-right: 2rem;
-
-        #banner {
-            width: 24rem;
-        }
-    }
-
-    main#submittedMain {
-        width: 24rem;
-
-        h1 {
-            margin: 1rem 0 0 1.5rem;
-            width: 80%;
-        }
 
         #dismiss {
-            width: 21rem;
+            width: 100%;
+            margin: 2rem 0 3rem 0;
         }
     }
-
-    form {
-        width: 21rem;
-    }
 }
+
+/* @media (max-width: 1160px) { */
+    /* main {
+
+        #banner {}
+    } */
+
+    /* main#submittedMain {} */
+
+    /* form {} */
+/* } */
