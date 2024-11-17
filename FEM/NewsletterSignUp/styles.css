@@ -36,10 +36,8 @@ main {
     background-color: white;
     min-height: 820px;
     height: 100vh;
-
     max-width: 24rem;
     padding: 0 2rem 0 0;
-
     font-weight: 500;
     border-radius: 1rem;
     box-shadow: .1rem .1rem 1rem rgb(0, 0, 0);
@@ -63,8 +61,6 @@ main:hover {
 
 #submittedMain {
     padding: 8rem 0 0 0;
-
-    /*  */
     width: 24rem;
 
     h1 {
@@ -75,15 +71,11 @@ main:hover {
     #dismiss {
         width: 21rem;
     }
-
-    /*  */
 }
 
 #banner {
     width: 100vw;
-    /*  */
     max-width: 24rem;
-    /*  */
     margin-bottom: 1.5rem;
 }
 
@@ -96,9 +88,6 @@ main:hover {
     display: none;
     color: rgb(219, 111, 109);
 }
-
-
-
 
 h1 {
     margin: 0 1rem 0 1.4rem;
@@ -143,10 +132,7 @@ form,
     font-weight: 600;
     font-size: .8rem;
     margin: 2rem 0 0 2rem;
-    /*  */
     width: 21rem;
-    /*  */
-
 }
 
 form#dismiss {
@@ -280,13 +266,10 @@ button:hover {
     }
 }
 
-/* @media (max-width: 1160px) { */
-    /* main {
-
-        #banner {}
-    } */
-
-    /* main#submittedMain {} */
-
-    /* form {} */
-/* } */
+@media (min-height: 820px) and (max-width: 1160px) {
+    form {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 3rem;
+    }
+}
