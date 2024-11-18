@@ -37,7 +37,7 @@ main {
     min-height: 820px;
     height: 100vh;
     max-width: 24rem;
-    padding: 0 2rem 0 0;
+    padding: 0;
     font-weight: 500;
     border-radius: 1rem;
     box-shadow: .1rem .1rem 1rem rgb(0, 0, 0);
@@ -47,16 +47,6 @@ main {
 main:hover {
     box-shadow: 13px 13px 20px hsla(0, 0%, 0%, 0.849);
     transition: box-shadow .3s;
-}
-
-.hide {
-    display: none;
-}
-
-.invalidMail {
-    color: rgb(219, 111, 109);
-    border: 1px solid rgb(219, 111, 109);
-    background-color: hsla(4, 100%, 67%, 0.163);
 }
 
 #submittedMain {
@@ -87,6 +77,16 @@ main:hover {
     float: right;
     display: none;
     color: rgb(219, 111, 109);
+}
+
+.hide {
+    display: none;
+}
+
+.invalidMail {
+    color: rgb(219, 111, 109);
+    border: 1px solid rgb(219, 111, 109);
+    background-color: hsla(4, 100%, 67%, 0.163);
 }
 
 h1 {
@@ -127,16 +127,14 @@ li::before {
 form,
 #dismiss {
     align-self: center;
-    justify-self: end;
     z-index: 100;
     font-weight: 600;
     font-size: .8rem;
-    margin: 2rem 0 0 2rem;
-    width: 21rem;
+    margin-top: 2rem;
+    max-width: 21rem;
 }
 
 form#dismiss {
-    margin: 0 0 2rem 0;
     position: absolute;
     bottom: 0;
 }
@@ -196,15 +194,12 @@ button:hover {
         float: right;
         max-width: 40%;
         content: url(./assets/img/illustration-sign-up-desktop.svg);
+        margin: 1.5rem;
     }
 
     h1 {
         font-size: 3.5rem;
         margin: 6rem 2rem .5rem 4rem;
-    }
-
-    #banner {
-        margin: 1.5rem;
     }
 
     section {
@@ -217,24 +212,22 @@ button:hover {
 
     form {
         display: inline;
-        /* position: relative; */
         float: left;
-        width: 100%;
+        max-width: 24rem;
         margin-top: 1rem;
-        margin-left: 0;
     }
 
     main#submittedMain {
         width: 30.5rem;
         max-height: 30.5rem;
-        padding: 1rem 2rem 0 4rem;
+        padding: 1rem 4rem 0 4rem;
         border-radius: 2rem;
 
         h1,
         section {
             padding: 0;
             margin: 0;
-            width: 90%;
+            width: 100%;
         }
 
         h1 {
@@ -250,7 +243,7 @@ button:hover {
         form {
             position: relative;
         }
-        
+
         input {
             padding: 0;
         }
@@ -260,7 +253,7 @@ button:hover {
         }
 
         #dismiss {
-            width: 100%;
+            min-width: 100%;
             margin: 2rem 0 3rem 0;
         }
     }
