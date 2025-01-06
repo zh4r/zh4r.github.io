@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="NFT Preview challenge @ Frontend Mentor">
+    <meta name="keywords" content="frontendmentor, frontend, mentor, zh4r, piv, nft, preview, card, etherium, eth">
+    <meta name="author" content="Plamen 'zh4r' Vachkov">
+    <meta property="og:description" content="Solution to the 'NFT Preview Card' challenge @FrontendMentor">
+    <meta property="og:image" content="./design/mobile-design.png">
+    <meta property="og:title" content="NFT preview">
+    <title>NFT Preview card component | Frontend Mentor</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/icon-ethereum.svg">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+            <div class="imgWrap">
+                <img src="./images/image-equilibrium.jpg" alt="" class="equImg">
+                <img src="./images/icon-view.svg" alt="" class="overlay">
+            </div>
+            <div class="popupImgContainer">
+                <span>&times;</span>
+                <img src="./images/image-equilibrium.jpg" alt="" class="popupImg">
+            </div>
+        </div>
+
+        <h1><a href="#" target="_blank">Equilibrium #3429</a></h1>
+
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><img src="./images/icon-ethereum.svg" alt="">0.041 ETH</td>
+                    <td><img src="./images/icon-clock.svg" alt="">3 days left</td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            <img src="./images/image-avatar.png" alt=""><span>Creation of</span> <a href="#" target="_blank">Jules
+                Wyvern</a>
+        </footer>
+
+    </main>
+
+    <script>
+        document.querySelectorAll('.imgWrap').forEach(image => {
+            image.onclick = () => {
+                console.log('clicked');
+                document.querySelector('.popupImgContainer').style.display = 'block';
+            };
+        });
+        document.querySelector('.popupImgContainer span').onclick = () => {
+                document.querySelector('.popupImgContainer').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+
+</html>
