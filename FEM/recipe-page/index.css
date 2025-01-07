@@ -68,7 +68,7 @@ header {
 }
 
 header p,
-.nutri p {
+#nutri p {
     font-size: 1.1rem;
     line-height: 1.6rem;
     margin: 0rem 1.6rem 0 2.2rem;
@@ -146,13 +146,13 @@ table>*:last-child>tr:last-of-type {
     padding-right: 1.5rem;
 }
 
-.preparation {
+#preparation {
     background-color: hsl(330, 100%, 98%);
     margin: 1.7rem 2.2rem;
     border-radius: .8rem;
 }
 
-.preparation h3 {
+#preparation h3 {
     font-size: 1.35rem;
     font-weight: 600;
     color: hsl(332, 51%, 32%);
@@ -161,13 +161,13 @@ table>*:last-child>tr:last-of-type {
     margin: 0;
 }
 
-.preparation ul {
+#preparation ul {
     margin: .5rem 0 1.5rem 1.5rem;
     font-size: .8rem;
     padding: 0 0 1.1rem 1.4rem;
 }
 
-.instructions {
+#instructions {
     margin: 2rem 0 1.8rem 0;
 }
 
@@ -243,7 +243,7 @@ footer {
         margin: 0;
     }
 
-    .preparation {
+    #preparation {
         padding: 0.02rem 0.2rem;
         margin: 1.5rem 0;
 
@@ -252,7 +252,7 @@ footer {
         }
     }
 
-    .ingredients ul {
+    #ingredients ul {
         padding: 0 1rem 2rem 1rem;
         margin: 0;
     }
@@ -262,7 +262,7 @@ footer {
         margin: 0;
     }
 
-    .instructions {
+    #instructions {
         line-height: 2.7rem;
         width: 46rem;
         padding: 0;
@@ -273,7 +273,7 @@ footer {
         }
     }
 
-    .nutri {
+    #nutri {
         margin: 1.4rem 0;
 
         p {
