@@ -25,6 +25,7 @@ body {
     align-items: center;
     height: 100vh;
     line-height: 1.7rem;
+    padding: 0 1rem;
 }
 
 main .imgWrap .popupImg {
