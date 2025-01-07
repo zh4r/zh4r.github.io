@@ -61,7 +61,7 @@ main .popupImgContainer .popupImg {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 70%;
     border-radius: 2rem;
     object-fit: cover;
 }
@@ -111,13 +111,16 @@ main {
 
 @media (min-width: 1000px) {
     main .popupImgContainer .popupImg {
-        width: 40%;
+        width: 60%;
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 500px) {
     .imgWrap {
         margin-bottom: -.6rem;
+    }
+    main .popupImgContainer .popupImg {
+        width: 95%;
     }
 }
 
