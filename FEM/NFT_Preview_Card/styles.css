@@ -111,7 +111,14 @@ main {
 
 @media (min-width: 1000px) {
     main .popupImgContainer .popupImg {
-        width: 60%;
+        max-width: 50%;
+        max-height: 90%;
+    }
+}
+
+@media (min-width: 1400px) {
+    main .popupImgContainer .popupImg {
+        max-width: 40%;
     }
 }
 
