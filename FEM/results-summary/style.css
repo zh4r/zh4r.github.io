@@ -35,6 +35,7 @@ body {
     max-height: 800px;
     position: relative;
     min-height: 100vh;
+    background-color: hsl(221, 100%, 96%);
 }
 
 
@@ -179,6 +180,7 @@ footer {
 .shadow-box {
     box-shadow: .1rem .4rem 1rem 1rem hsl(221, 100%, 96%);
     border-radius: 1.8rem;
+    background-color: white;
 }
 
 .scored {
